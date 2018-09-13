@@ -1,0 +1,98 @@
+Stanford tagger output: 
+
+Procedure : 70 percent brown corpus used to train stanford tagger using 
+left3words(tagger takes context from last 3 words). 30 percent brown
+corpus was used to test the trained model giving the following report.
+
+             precision    recall  f1-score   support
+
+          .       1.00      1.00      1.00     22471
+        ADJ       0.91      0.94      0.93      7339
+        ADP       0.96      0.98      0.97     14953
+        ADV       0.95      0.92      0.93      8319
+       CONJ       0.99      1.00      0.99      4406
+        DET       0.99      0.99      0.99     16380
+       NOUN       0.97      0.98      0.97     27831
+        NUM       0.97      0.99      0.98      1038
+       PRON       1.00      0.98      0.99     10795
+        PRT       0.95      0.92      0.93      5655
+       VERB       0.99      0.98      0.99     26401
+          X       0.79      0.39      0.52        98
+
+avg / total       0.98      0.98      0.98    145686
+
+
+CRF tagger output:
+
+Procedure: 
+
+70 percent brown corpus used to train crf tagger using. 
+30 percent brown corpus was used to test the trained crf 
+tagger model giving the following report.
+
+             precision    recall  f1-score   support
+
+          .       1.00      1.00      1.00     42531
+        ADJ       0.89      0.83      0.86     14333
+        ADP       0.94      0.96      0.95     27622
+        ADV       0.92      0.86      0.89     15343
+       CONJ       0.99      1.00      0.99      8689
+        DET       0.99      0.98      0.98     30034
+       NOUN       0.92      0.96      0.94     51226
+        NUM       0.91      0.94      0.93      1753
+       PRON       0.99      0.98      0.98     20297
+        PRT       0.90      0.87      0.89     10020
+       VERB       0.96      0.96      0.96     48403
+          X       0.59      0.23      0.33       252
+
+avg / total       0.95      0.95      0.95    270503
+
+
+Brill tagger output:
+
+70 percent brown corpus used to train brill tagger 
+using defined templates and using baseline tagger 
+as crf tagger model which was also trained on 70 percent
+of brown corpus. 30 percent brown corpus was used to 
+test the trained brill tagger model giving the following report.
+
+             precision    recall  f1-score   number of tags
+
+          .       1.00      1.00      1.00    147565
+        ADJ       0.94      0.90      0.92     83721
+        ADP       0.97      0.97      0.97    144766
+        ADV       0.93      0.92      0.92     56239
+       CONJ       0.99      1.00      0.99     38151
+        DET       0.99      0.99      0.99    137019
+       NOUN       0.96      0.97      0.97    275558
+        NUM       0.95      0.98      0.96     14874
+       PRON       0.99      0.98      0.99     49334
+        PRT       0.92      0.92      0.92     29829
+       VERB       0.97      0.97      0.97    182750
+          X       0.81      0.45      0.58      1386
+
+avg / total       0.97      0.97      0.97   1161192
+
+Claws tagger:
+
+This was tested on just the first 300 sentences of the brown corpus due to limitations of the online demo.
+
+
+             precision    recall  f1-score   no of tags
+
+          .       1.00      1.00      1.00       754
+        ADJ       0.85      0.87      0.86       415
+        ADP       0.98      0.94      0.96       823
+        ADV       0.86      0.84      0.85       161
+       CONJ       1.00      1.00      1.00       137
+        DET       0.98      1.00      0.99       748
+       NOUN       0.94      0.95      0.95      2122
+        NUM       0.94      0.94      0.94       162
+       PRON       0.96      0.99      0.98       137
+        PRT       0.88      0.94      0.91       143
+       VERB       0.95      0.93      0.94      1040
+
+avg / total       0.95      0.95      0.95      6642
+
+
+Stanford tagger has the highest precision, followed by brill, followed by crf and claws.
